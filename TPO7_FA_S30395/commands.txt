@@ -1,0 +1,6 @@
+in kafka:
+.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+.\bin\windows\kafka-server-start.bat .\config\server.properties
+
+in kafka bin windows
+.\kafka-configs.bat --bootstrap-server localhost:9092 --entity-type topics --entity-name chat-presence --alter --add-config cleanup.policy=compact
